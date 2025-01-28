@@ -7,15 +7,20 @@
 	--blue: 	#34E0FB;
 }
 
-html, body {
-	background-color: var(--pale);
+html {
+	background-color: var(--white);
 	margin: 0;
 	padding: 0;
+	display: flex;
+	justify-content: center;
 }
 
 body {
+	background-color: var(--pale);
+	overflow: hidden;
+	width: 400px;
 	display: grid;
-	grid-template-columns: 100vw;
+	grid-template-columns: 100%;
 	grid-template-rows: 10vh 65vh 5vh 20vh;
 }
 
@@ -28,7 +33,7 @@ body {
 }
 
 #contacts {
-	max-width: 100vw;
+	max-width: 100%;
 	overflow-y: scroll;
 	padding-left: 1em;
 	display: flex;
