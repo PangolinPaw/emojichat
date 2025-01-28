@@ -59,7 +59,7 @@ function get_messages(friend_code) {
 			}
 		}
 	}
-	xmlhttp.open("POST", "http://127.0.0.1:5000/pkmn/receive/" + friend_code, true);
+	xmlhttp.open("POST", "https://www.gareth-murden.com/pkmn/receive/" + friend_code, true);
 	xmlhttp.setRequestHeader('Content-Type', 'application/json')
 	xmlhttp.send(JSON.stringify({'my_code':MY_CODE, 'password':MY_PASSWORD}));
 
@@ -72,7 +72,7 @@ function get_messages(friend_code) {
 
 function post_message(message) {
 	var xmlhttp = new XMLHttpRequest();
-	xmlhttp.open("POST", "http://127.0.0.1:5000/pkmn/send/" + SELECTED_CONTACT, true);
+	xmlhttp.open("POST", "https://www.gareth-murden.com/pkmn/send/" + SELECTED_CONTACT, true);
 	xmlhttp.setRequestHeader('Content-Type', 'application/json')
 	xmlhttp.send(JSON.stringify({'my_code':MY_CODE, 'message':message}));
 }
